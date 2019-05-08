@@ -5,9 +5,9 @@
     </head>
     <body>
         <h1>HEJ!!!</h1>
-        <form action="index.html" method="post">
-            <input type="text" id="hplats" name="hplats">
-            <input type="submit" value="Submit form">
+        <form id="hplats" onsubmit="return false;">
+            <input type="text" id="station">
+            <input type="submit" onclick="setUrl()">
         </form>
         <div id="mainDiv"></div>
         <script type="text/javascript" src="script.js"></script>
