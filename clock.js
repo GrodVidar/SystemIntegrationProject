@@ -1,4 +1,4 @@
-const clockPara = document.getElementById('clockDiv');
+const clockDiv = document.getElementById('clockDiv');
 
 const clockurl = "https://cors-anywhere.herokuapp.com/http://worldtimeapi.org/api/timezone/Europe/Stockholm"
 
@@ -14,6 +14,6 @@ fetch(clockurl)
             var currentDate = fullString.slice(0,tPos);
             var currentClock = fullString.slice((tPos+1),dotPos);
 
-            clockPara.innerHTML = `Date: ${currentDate} <br>`;
-            clockPara.innerHTML += `Clock ${currentClock}`;
+            clockDiv.innerHTML = `Date: ${currentDate}<br>`;
+            clockDiv.innerHTML += `Clock ${currentClock}`;
         })

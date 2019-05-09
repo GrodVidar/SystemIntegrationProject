@@ -1,0 +1,57 @@
+
+#weatherDiv {
+    grid-area: weatherDiv;
+    border: solid 2px black;
+    padding: 2px 5px 2px 5px;
+
+}
+
+#clockDiv {
+    grid-area: clockDiv;
+    border: solid 2px black;
+    padding: 2px 5px 2px 5px;
+
+}
+
+#emptyDiv {
+    grid-area: emptyDiv;
+}
+
+.grid{
+    display: grid;
+    grid-column-gap: 900px;
+    grid-template-areas:
+    'weatherDiv clockDiv'
+
+}
+
+#hplats {
+    margin-top: 50px;
+    margin-left: 30px;
+
+}
+
+#mainDiv {
+    border: solid 2px black;
+    padding-top: 5px;
+    padding-left: 25px;
+    margin-top: 25px;
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-bottom: 20px;
+    background-color: white;
+    min-height: 500px;
+    height: auto;
+
+}
+
+#quote {
+    float: right;
+}
+
+#outer {
+    width:550px;
+    margin-top: 60px;
+    border: solid 2px black;
+    background-image: url("https://sl.se/Resources/img/sl_logo_fb.png");
+}
