@@ -5,20 +5,22 @@
         <link rel="stylesheet" href="css/master.css">
     </head>
     <body>
-        <div class="grid">
+    <div class="grid">
         <div id="weatherDiv"></div>
         <script src="weather.js"></script>
         <div id="clockDiv"></div>
         <script src="clock.js"></script>
     </div>
+    <div class="grid2">
         <div id="outer">
-        <form id="hplats" onsubmit="return false;">
-            <input type="text" id="station">
-            <input type="submit" onclick="setUrl()">
-        </form>
-            <div id="mainDiv"></div>
+            <form id="hplats" onsubmit="return false;">
+                <input type="text" id="station">
+                <input type="submit" onclick="setUrl()">
+            </form>
+                <div id="mainDiv"></div>
+        </div>
         <div id="quote">
-            <button type="button" onclick="getQuote()">Get Quote Of The Day!</button>
+            <button type="button" id="knapp" onclick="getQuote()">Get Quote Of The Day!</button>
             <div id="qOfTday"></div>
             <script src="quote.js"></script>
         </div>

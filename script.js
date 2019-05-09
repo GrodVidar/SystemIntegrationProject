@@ -6,6 +6,7 @@ var slurl;
 
 function setUrl()
 {
+    mainDiv.innerHTML = null;
     var g_station = document.getElementById('station').value;
     hpurl = "https://cors-anywhere.herokuapp.com/https://api.sl.se/api2/typeahead.json?key="+ hpKey +"&searchstring=" + g_station +"&stationsonly=True&maxresults=1";
     console.log("url: " + hpurl);
