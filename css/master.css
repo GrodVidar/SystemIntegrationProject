@@ -1,3 +1,7 @@
+body{
+    background-image: url('http://pixelartmaker.com/art/becdd8955dc57eb.png');
+}
+
 #quote {
     width: auto;
     height: auto;
@@ -16,6 +20,7 @@
 }
 
 #weatherDiv {
+    background-color: white;
     grid-area: weatherDiv;
     border: solid 2px black;
     padding: 2px 5px 2px 5px;
@@ -25,6 +30,7 @@
 }
 
 #clockDiv {
+    background-color: white;
     grid-area: clockDiv;
     border: solid 2px black;
     padding: 2px 5px 2px 5px;
@@ -40,17 +46,32 @@
     grid-template-areas:
     'weatherDiv quoteDiv clockDiv';
 }
+
 .grid2 {
     display: grid;
     grid-column-gap: auto;
     grid-template-areas:
     'outerDiv factDiv urbanDiv'
+    'outerDiv postDiv urbanDiv'
 }
 
 #hplats {
-    margin-top: 50px;
+    margin-top: 30px;
     margin-left: 30px;
+    border: solid 2px black;
+    padding-bottom: 10px;
+    margin-right: 200px;
+    background-color: #ffffff;
+}
 
+#station {
+    margin-left: 7px;
+}
+
+#question {
+    color: black;
+    margin-left: 15px;
+    margin-bottom: 8px;
 }
 
 #mainDiv {
@@ -68,27 +89,26 @@
 }
 
 #fact {
-    float: right;
     margin-top: 5px;
     grid-area: factDiv;
     width: 550px;
     height: 300px;
-    margin-left: auto;
-
 }
 
 #factmini {
-    margin-top: 45px;
+    margin-top: 20px;
     margin-left: 10px;
     margin-right: 5px;
     border: solid 2px black;
-    padding: 2px 5px 2px 5px;
+    padding: 5px 5px 5px 10px;
+    min-height: 50px;
+    background-color: white;
 }
 
 #factButton{
-    float:right;
-    margin-right: 10px;
-    margin-top: 10px;
+    margin-right: 39%;
+    margin-left: 39%;
+    margin-top: 30px;
 }
 
 #outer {
@@ -96,9 +116,79 @@
     grid-area: outerDiv;
     width:550px;
     border: solid 2px black;
+    background-color: white;
     background-image: url("https://sl.se/Resources/img/sl_logo_fb.png");
 }
 
 #urbanOuter {
     grid-area: urbanDiv;
+    margin-left: auto;
+    background-color: #1B2338;
+    width: 500px;
+}
+
+#urbanForm {
+    margin-left: 20px;
+    margin-top: 5px;
+}
+
+#urbanMain {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+    font-size: 20px;
+    background-color: #000000;
+    color: #F2F927;
+}
+
+#urbanBild{
+    margin-left: 20px;
+    margin-top: 5%;
+    width: 200px;
+    height: 50px;
+}
+
+#postOuter {
+    grid-area: postDiv;
+    border: solid 2px black;
+    background-color: white;
+    text-align: center;
+}
+
+#postForm {
+    margin-left: 30px;
+    margin-top: 20px;
+}
+
+#userName {
+    margin-bottom: 5px;
+}
+
+#userMail {
+    margin-bottom: 10px;
+}
+
+#postButton {
+    margin-left: 20px;
+}
+
+#maleDiv {
+    border: solid 2px black;
+    margin-right: 5px;
+    padding: 2px 2px 2px 2px;
+}
+
+#femaleDiv {
+    border: solid 2px black;
+    padding: 2px 2px 2px 2px;
+}
+
+#otherDiv {
+    border: solid 2px black;
+    margin-left: 5px;
+    padding: 2px 2px 2px 2px;
+}
+
+#Female {
+    margin-top: auto;
 }

@@ -19,7 +19,10 @@ function searchUrban()
     .then(urbanResp => urbanResp.json())
     .then(urbanInfo =>
     {
-        urbanDivider.innerHTML = urbanInfo.list[0].definition;
+        var urbanString = urbanInfo.list[0].definition;
+        urbanString = urbanString.replace(/\[/g,'');
+        urbanString = urbanString.replace(/\]/g,'');
+        urbanDivider.innerHTML = `About ${searchWord}: ${urbanString}`;
     })
 
     };
