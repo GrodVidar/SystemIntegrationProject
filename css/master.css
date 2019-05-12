@@ -4,7 +4,7 @@ body{
 
 #quote {
     width: auto;
-    height: auto;
+    height: 65px;
     grid-area: quoteDiv;
     background-color: beige;
 }
@@ -22,21 +22,41 @@ body{
 #weatherDiv {
     background-color: white;
     grid-area: weatherDiv;
+    height: 45px;
     border: solid 2px black;
     padding: 2px 5px 2px 5px;
-    margin-bottom: 35px;
+    margin-bottom: 25px;
     margin-right: auto;
+
+}
+
+p {
+    display: inline;
+}
+
+#iconImg {
+    size: 50px;
+}
+
+.pClass{
+    margin-bottom: 50px;
+}
+
+#pDiv {
+    float:left;
+    margin-top: 15px;
 
 }
 
 #clockDiv {
     background-color: white;
     grid-area: clockDiv;
+    height: 45px;
     border: solid 2px black;
-    padding: 2px 5px 2px 5px;
+    padding: 8px 5px 2px 5px;
     margin-bottom: 20px;
     margin-left: auto;
-    text-align: right;
+    text-align: left;
 
 }
 
@@ -93,6 +113,7 @@ body{
     grid-area: factDiv;
     width: 550px;
     height: 300px;
+    margin-left: 78px;
 }
 
 #factmini {
@@ -149,7 +170,9 @@ body{
 }
 
 #postOuter {
+    margin-left: 80px;
     grid-area: postDiv;
+    width: 545px;
     border: solid 2px black;
     background-color: white;
     text-align: center;
