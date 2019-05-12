@@ -7,15 +7,19 @@ body{
     height: 65px;
     grid-area: quoteDiv;
     background-color: beige;
+    text-align: center;
 }
 
 #qOfTday {
-    margin-left: 100px;
-    margin-right: 100px;
+    /*margin-left: 100px;
+    margin-right: 100px;*/
+    display: inline-block;
+    
     margin-top: 17px;
     margin-bottom: 17px;
     font-style: italic;
     font-size: 22px;
+    text-align: center;
     background-color: white;
 }
 
