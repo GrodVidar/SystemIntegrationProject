@@ -42,6 +42,6 @@ fetch(weatherUrl)
                     document.getElementById("iconImg").src = "http://openweathermap.org/img/w/50d.png";
                     break;
                 default:
-                    document.getElementById("iconImg").src = "http://picresize.com/images/rsz_5cd7e7b4e8d9c.png";
+                    document.getElementById("iconImg").src = "https://i.imgur.com/5DdFi4T.png";
             }
         })
