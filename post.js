@@ -8,12 +8,14 @@ function postInfo()
     var userMail = document.getElementById("userMail").value;
     var userName = document.getElementById("userName").value;
     var selectedGender;
+    //loop through the three options to see wich one is selected
     for(var i = 0; i < genders.length; i++)
     {
         if(genders[i].checked)
         selectedGender = genders[i].value;
     }
 
+    //make the input "Json-friendly"
     var data = {name: userName, email: userMail, sex: selectedGender};
 
     fetch(postUrl,
@@ -27,7 +29,8 @@ function postInfo()
         body : JSON.stringify(data)
     })
     .then(postRes => postRes.json())
-    .then(postRes => console.log(postRes))
+    //makes the form reset and clears all inputs.
     frm.reset();
+    //return false to stop the site from refreshing
     return false;
 }

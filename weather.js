@@ -2,16 +2,17 @@ const weatherDiv = document.getElementById('weatherP');
 
 const weatherUrl = "https://api.openweathermap.org/data/2.5/weather?id=2673730&APPID=b59bef2ad5a1d58ea369389b3a449fa8&units=metric"
 
+//fetching the url
 fetch(weatherUrl)
     .then(weatherResp => weatherResp.json())
         .then(weatherData =>
         {
+            //defines weatherString with the current temperature
             var weatherString = "Temperature is: " + weatherData.main.temp;
-            //console.log (weatherData.main.temp);
             weatherDiv.innerHTML = weatherString;
-
+            //fetches the icon-string
             var iconInfo = weatherData.weather[0].icon;
-
+            //we check the value of the string and find the matching from https://openweathermap.org/weather-conditions
             switch(iconInfo)
             {
                 case "01d":

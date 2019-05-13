@@ -16,7 +16,7 @@ function updateClock()
                     var currentClock = fullString.slice((tPos+1),dotPos);
 
                     clockDiv.innerHTML = `Date: ${currentDate}<br>`;
-                    clockDiv.innerHTML += `Clock ${currentClock}`;
+                    clockDiv.innerHTML += `Clock: ${currentClock}`;
                 })
     //setTimeout(updateClock, 1000);
 }
