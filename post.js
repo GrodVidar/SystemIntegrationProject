@@ -1,5 +1,36 @@
-var postUrl = "https://5cd130b0d4a78300147be599.mockapi.io/Info";
+const postUrl = "https://5cd130b0d4a78300147be599.mockapi.io/Info";
+const postLoc = "https://5cd130b0d4a78300147be599.mockapi.io/Location"
 
+if(navigator.geolocation)
+{
+    navigator.geolocation.getCurrentPosition(postPosition);
+}
+else {
+    {
+        console.log("Geolocation is not supported by this browser!");
+    }
+}
+
+function postPosition(position)
+{
+    var lat = position.coords.latitude;
+    var long = position.coords.longitude;
+
+    var posData = {lat: lat, long: long};
+
+    fetch(postLoc,
+    {
+        method: 'post',
+        headers:
+        {
+             'Accept' : 'application/json, text/plain, */*',
+             'Content-Type' : 'application/json'
+        },
+        body : JSON.stringify(posData)
+    })
+    //.then(posResp => posResp(json))
+    //.then(console.log(posResp))
+}
 
 function postInfo()
 {
@@ -14,21 +45,22 @@ function postInfo()
         if(genders[i].checked)
         selectedGender = genders[i].value;
     }
+    if(userName !== "" && userMail !== "" && selectedGender.indexOf("sex")== -1)
+    {    //make the input "Json-friendly"
+        var data = {name: userName, email: userMail, sex: selectedGender};
 
-    //make the input "Json-friendly"
-    var data = {name: userName, email: userMail, sex: selectedGender};
-
-    fetch(postUrl,
-    {
-        method: 'post',
-        headers:
-        {
-            'Accept' : 'application/json, text/plain, */*',
-            'Content-Type' : 'application/json'
-        },
-        body : JSON.stringify(data)
-    })
+        fetch(postUrl,
+            {
+                method: 'post',
+                headers:
+                {
+                    'Accept' : 'application/json, text/plain, */*',
+                    'Content-Type' : 'application/json'
+                },
+                body : JSON.stringify(data)
+            })
     .then(postRes => postRes.json())
+    }
     //makes the form reset and clears all inputs.
     frm.reset();
     //return false to stop the site from refreshing
