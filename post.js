@@ -1,6 +1,8 @@
+//Global Variables
 const postUrl = "https://5cd130b0d4a78300147be599.mockapi.io/Info";
 const postLoc = "https://5cd130b0d4a78300147be599.mockapi.io/Location"
 
+//Checking if user browser supports geolocation, to then send it to API >:)
 if(navigator.geolocation)
 {
     navigator.geolocation.getCurrentPosition(postPosition);
@@ -11,6 +13,8 @@ else {
     }
 }
 
+
+//function that is called in former if-statement
 function postPosition(position)
 {
     var lat = position.coords.latitude;
@@ -28,10 +32,10 @@ function postPosition(position)
         },
         body : JSON.stringify(posData)
     })
-    //.then(posResp => posResp(json))
-    //.then(console.log(posResp))
 }
 
+
+//Function that is called if the user submits their information.
 function postInfo()
 {
     var frm = document.getElementById("postForm");

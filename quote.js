@@ -1,6 +1,7 @@
+//Global Variables
 var qOfTday = document.getElementById("qOfTday");
 const quoteUrl = "https://quotes.rest/qod.json";
-
+//Fetches information from API.
     fetch(quoteUrl)
         .then(quoteResp => quoteResp.json())
             .then(quoteData =>
